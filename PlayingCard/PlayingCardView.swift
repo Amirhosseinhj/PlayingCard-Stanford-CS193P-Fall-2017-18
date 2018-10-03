@@ -8,11 +8,15 @@
 
 import UIKit
 
+@IBDesignable
 class PlayingCardView: UIView {
 
-    var rank: Int = 11 { didSet{setNeedsLayout(); setNeedsDisplay()} }
+    @IBInspectable
+    var rank: Int = 12 { didSet{setNeedsLayout(); setNeedsDisplay()} }
+    @IBInspectable
     var suit: String = "❤️" { didSet{setNeedsLayout(); setNeedsDisplay()} }
-    var isFaceUp: Bool = true { didSet{setNeedsLayout(); setNeedsDisplay()} }
+    @IBInspectable
+    var isFaceUp: Bool = false { didSet{setNeedsLayout(); setNeedsDisplay()} }
     
     private func centeredAttributedString( _ string: String, fontSize: CGFloat) -> NSAttributedString {
         var font = UIFont.preferredFont(forTextStyle: .body).withSize(fontSize)
@@ -40,7 +44,7 @@ class PlayingCardView: UIView {
         label.attributedText = cornerString
         label.frame.size = CGSize.zero
         label.sizeToFit()
-        label.isEnabled = !isFaceUp
+        label.isHidden = !isFaceUp
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
@@ -113,13 +117,19 @@ class PlayingCardView: UIView {
         UIColor.white.setFill()
         roundedRect.fill()
         
-        if let faceCardImage = UIImage(named: rankString+suit) {
-            faceCardImage.draw(in: bounds.zoom(by: SizeRatio.faceCardImageSizeToBoundsSize))
+        if isFaceUp {
+            if let faceCardImage = UIImage(named: rankString+suit, in: Bundle(for: self.classForCoder), compatibleWith: traitCollection) {
+                faceCardImage.draw(in: bounds.zoom(by: SizeRatio.faceCardImageSizeToBoundsSize))
+            } else {
+                drawPips()
+            }
         } else {
-            drawPips()
+            if let cardBackImage = UIImage(named: "cardback", in: Bundle(for: self.classForCoder), compatibleWith: traitCollection) {
+                cardBackImage.draw(in: bounds)
+            }
         }
+        
     }
-    
 
 }
 
