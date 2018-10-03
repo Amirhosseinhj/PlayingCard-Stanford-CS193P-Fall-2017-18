@@ -13,7 +13,7 @@
 		60D42AF62163BDA000ACC6E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60D42AF52163BDA000ACC6E9 /* Assets.xcassets */; };
 		60D42AF92163BDA000ACC6E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60D42AF72163BDA000ACC6E9 /* LaunchScreen.storyboard */; };
 		60D42B022163BF6500ACC6E9 /* PlayingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D42B012163BF6400ACC6E9 /* PlayingCard.swift */; };
-		60D42B042163C57000ACC6E9 /* PlayingCArdDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D42B032163C57000ACC6E9 /* PlayingCArdDeck.swift */; };
+		60D42B042163C57000ACC6E9 /* PlayingCardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D42B032163C57000ACC6E9 /* PlayingCardDeck.swift */; };
 		60D42B062163D51100ACC6E9 /* PlayingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D42B052163D51100ACC6E9 /* PlayingCardView.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +26,7 @@
 		60D42AF82163BDA000ACC6E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60D42AFA2163BDA000ACC6E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60D42B012163BF6400ACC6E9 /* PlayingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCard.swift; sourceTree = "<group>"; };
-		60D42B032163C57000ACC6E9 /* PlayingCArdDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCArdDeck.swift; sourceTree = "<group>"; };
+		60D42B032163C57000ACC6E9 /* PlayingCardDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardDeck.swift; sourceTree = "<group>"; };
 		60D42B052163D51100ACC6E9 /* PlayingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +62,9 @@
 			children = (
 				60D42B002163BF2400ACC6E9 /* Supporting Files */,
 				60D42AF02163BD9E00ACC6E9 /* ViewController.swift */,
+				60D42B012163BF6400ACC6E9 /* PlayingCard.swift */,
+				60D42B052163D51100ACC6E9 /* PlayingCardView.swift */,
+				60D42B032163C57000ACC6E9 /* PlayingCardDeck.swift */,
 				60D42AF22163BD9E00ACC6E9 /* Main.storyboard */,
 				60D42AF52163BDA000ACC6E9 /* Assets.xcassets */,
 				60D42AFA2163BDA000ACC6E9 /* Info.plist */,
@@ -74,9 +77,6 @@
 			children = (
 				60D42AEE2163BD9E00ACC6E9 /* AppDelegate.swift */,
 				60D42AF72163BDA000ACC6E9 /* LaunchScreen.storyboard */,
-				60D42B012163BF6400ACC6E9 /* PlayingCard.swift */,
-				60D42B052163D51100ACC6E9 /* PlayingCardView.swift */,
-				60D42B032163C57000ACC6E9 /* PlayingCArdDeck.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -153,7 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60D42AF12163BD9E00ACC6E9 /* ViewController.swift in Sources */,
-				60D42B042163C57000ACC6E9 /* PlayingCArdDeck.swift in Sources */,
+				60D42B042163C57000ACC6E9 /* PlayingCardDeck.swift in Sources */,
 				60D42B022163BF6500ACC6E9 /* PlayingCard.swift in Sources */,
 				60D42B062163D51100ACC6E9 /* PlayingCardView.swift in Sources */,
 				60D42AEF2163BD9E00ACC6E9 /* AppDelegate.swift in Sources */,
